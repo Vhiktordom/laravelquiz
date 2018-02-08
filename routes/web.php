@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('profile', 'UserController@profile')->middleware('auth');
 Route::post('profile', 'UserController@update_avatar')->middleware('auth');
 Route::get('quiz', 'UserController@quiz')->middleware('auth');
-Route::get('check', 'UserController@check');
+Route::post('check', 'UserController@check');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
