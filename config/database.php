@@ -1,5 +1,12 @@
 <?php
 
+$url = parse_url(getenv("mysql://ba64284920d36b:2cff4344@us-cdbr-iron-east-05.cleardb.net/heroku_00e6927d8b7ae00?reconnect=true"));
+
+$host = $url["us-cdbr-iron-east-05.cleardb.net"];
+$username = $url["ba64284920d36b"];
+$password = $url["2cff4344"];
+$database = substr($url["path"], 1);
+
 return [
 
     /*
@@ -40,13 +47,13 @@ return [
         ],
 
         'mysql' => [
-            $url = parse_url(getenv("mysql://ba64284920d36b:2cff4344@us-cdbr-iron-east-05.cleardb.net/heroku_00e6927d8b7ae00?reconnect=true"));
+
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net'),
+            'host' => env('DB_HOST', $host),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'heroku_00e6927d8b7ae00'),
-            'username' => env('DB_USERNAME', 'ba64284920d36b'),
-            'password' => env('DB_PASSWORD', '2cff4344'),
+            'database' => env('DB_DATABASE', $database),
+            'username' => env('DB_USERNAME', $username),
+            'password' => env('DB_PASSWORD', $password),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
