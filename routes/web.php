@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('profile', 'UserController@profile')->middleware('auth');
 Route::post('profile', 'UserController@update_avatar')->middleware('auth');
 Route::get('quiz', 'UserController@quiz')->middleware('auth');
+//The Check Controller will link to the check route to calculate the user total score
 Route::post('check', 'UserController@check');
 
 Route::get('/home', 'HomeController@index')->name('home');
