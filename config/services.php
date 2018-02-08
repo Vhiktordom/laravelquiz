@@ -38,7 +38,7 @@ return [
     'facebook' => [
     'client_id' => '1987993191524231',         // Your GitHub Client ID
     'client_secret' => '513c44b7e8bd6809fc3e51cf16a75df7', // Your GitHub Client Secret
-    'redirect' => 'http://quiz.com/login/facebook/callback',
+    'redirect' => 'http://getdevquiz.herokuapp.com/login/facebook/callback',
 ],
 
 ];
