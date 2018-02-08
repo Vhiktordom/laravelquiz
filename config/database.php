@@ -40,6 +40,7 @@ return [
         ],
 
         'mysql' => [
+            $url = parse_url(getenv("mysql://ba64284920d36b:2cff4344@us-cdbr-iron-east-05.cleardb.net/heroku_00e6927d8b7ae00?reconnect=true"));
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
