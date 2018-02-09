@@ -18,10 +18,10 @@
                                      <input type="radio" name="question_{{ $quizs->id }}_answer" value="A" autocomplete="off"> {{ $quizs->first_opt }}
                                   </label>
                                   <label class="btn btn-primary">
-                                     <input type="radio" name="question_{{ $quizs->id }}_answer" value="B" autocomplete="off"> {{ $quizs->second_opt }}
+                                     <input type="radio" name="question_{{ $quizs->id }}_answer"  id="question_{{ $quizs->id }}_answer_B" value="B" autocomplete="off"> {{ $quizs->second_opt }}
                                   </label>
                                   <label class="btn btn-primary">
-                                    <input type="radio" name="question_{{ $quizs->id }}_answer" value="C" autocomplete="off"> {{ $quizs->third_opt }}
+                                    <input type="radio" name="question_{{ $quizs->id }}_answer" id="question_{{ $quizs->id }}_answer_C" value="C" autocomplete="off"> {{ $quizs->third_opt }}
                                   </label>
                             </div>
                         </br></br>

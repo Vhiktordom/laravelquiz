@@ -61,7 +61,7 @@ class UserController extends Controller
             //$quiz = Quiz::simplepaginate(1);
              $quiz = Quiz::get();
            // echo $quiz->question;
-            return view('quiz')->with('quiz', $quiz);
+            return view('quiz', compact('quiz'));
         }
 
         public function check(Request $request)
