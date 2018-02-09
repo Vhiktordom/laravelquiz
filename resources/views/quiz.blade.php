@@ -12,7 +12,7 @@
                     @foreach($quiz as $quizs)
                     <div class="panel-body">
                             {{ csrf_field() }}
-                             <h3>{{ $quizs->id}}. {{ $quizs->question }}</h3>
+                             <h3> {{ $quizs->question }}</h3>
                              <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                   <label class="btn btn-primary">
                                      <input type="radio" name="question_{{ $quizs->id }}_answer" value="A" autocomplete="off"> {{ $quizs->first_opt }}
