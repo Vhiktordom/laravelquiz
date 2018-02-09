@@ -6,38 +6,26 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
 
-             <?php 
+             <?php
 
-                    foreach ($ans as $key => $value)
-                     {
+            $answer1 =  $ans['question_1_answer']; 
+            $answer2 =  $ans['question_11_answer'];
+            $answer3 =  $ans['question_21_answer'];
+            $answer4 =  $ans['question_31_answer'];
 
-                        $names[] = $key . '<br>';
+            $totalCorrect = 0;
 
-                     }
+            if($answer1 == 'B') { $totalCorrect++; }
+            if($answer2 == 'A') { $totalCorrect++; }
+            if($answer3 == 'B') { $totalCorrect++; }
+            if($answer4 == 'C') { $totalCorrect++; }
 
-                        
-                        $answer1 =  $names[1];
-                        $answer2 =  $names[2];
-                        $answer3 =  $names[3];
-                        $answer4 =  $names[4];
+            $quiz = App\Quiz::all();
 
-                        $totalCorrect = 0;
-
-                        if($answer1 == 'B') { $totalCorrect++; }
-                        if($answer2 == 'A') { $totalCorrect++; }
-                        if($answer3 == 'B') { $totalCorrect++; }
-                        if($answer4 == 'C') { $totalCorrect++; }
-
-                        $quiz = App\Quiz::all();
-
-                        $question1 = $quiz[0]->question;
-                        $question2 = $quiz[1]->question;
-                        $question3 = $quiz[2]->question;
-                        $question4 = $quiz[3]->question;
-
-
-                        
-
+            $question1 = $quiz[0]->question;
+            $question2 = $quiz[1]->question;
+            $question3 = $quiz[2]->question;
+            $question4 = $quiz[3]->question;
 
             ?>
 
@@ -76,6 +64,8 @@
             <a class="btn btn-primary" href="quiz" role="button">Try Again</a>
 
             </center>
+
+
 
 
            
